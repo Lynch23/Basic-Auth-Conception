@@ -5,13 +5,13 @@
 - Authentication vs. Authorization
 - Authentication
 - Passwords
--- How to (Not) Store Passwords
--- Understanding Hashing Functions
--- Basics of Bcrypt.
--- Bcrypt and Hashing functions
--- Password Salts
+  - How to (Not) Store Passwords 
+  - Understanding Hashing Functions
+  - Basics of Bcrypt.
+  - Bcrypt and Hashing functions
+  - Password Salts
 - Authorization
--- Sessions and Cookies (Brief explaination)
+  - Sessions and Cookies (Brief explaination)
 Auth Demo
 
 ## Authentication vs. Authorization
