@@ -1,5 +1,5 @@
-# Fundamentals of Authentication & Authorization on a web app.
- This repo will explain and demonstrate how to integrate basic authentication/authorization into a web app running on ExpressJS, NodeJS and mongoDB. There will be an assignment at the end to apply all the concepts discussed.
+# Authentication & Authorization on a Web App.
+ This repo will explain and demonstrate how to integrate basic authentication/authorization into a web app running on ExpressJS, NodeJS and mongoDB. This will set you to on a path to building your own secure apps. There will be an assignment at the end to apply all the concepts discussed.
 
 ## Concepts
 - Authentication vs. Authorization
