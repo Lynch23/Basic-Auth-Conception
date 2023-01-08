@@ -1,4 +1,4 @@
-# Authentication & Authorization on a Web App. (Incomplete)
+# Authentication & Authorization on a Web App. (Incomplete) Scheduled to be live on the 20 of January :(
  This repo will explain and demonstrate how to integrate basic authentication/authorization into a web app running on ExpressJS, NodeJS and mongoDB. This will set you to on a path to building your own secure apps. There will be an assignment at the end to apply all the concepts discussed.
 
 ## Concepts
