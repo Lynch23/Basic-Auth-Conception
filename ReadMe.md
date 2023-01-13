@@ -22,14 +22,6 @@ To follow along make sure you have an in empty folder with these dependancies in
 - mongoose
 - ejs
 - bcrypt
-  - How to (Not) Store Passwords 
-  - Understanding Hashing Functions
-  - Basics of Bcrypt.
-  - Bcrypt and Hashing functions
-  - Password Salts
-- Authorization
-  - Sessions and Cookies (Brief explaination)
-- Auth Demo
 
 ## Authentication vs. Authorization
 - Authentication - This is verifying who the particular user is. Typically, authentication is done with a username/password combination, but it can also be done with security questions, face recognition, fingerprint identification, etc.
