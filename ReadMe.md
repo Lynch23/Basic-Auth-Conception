@@ -17,6 +17,9 @@
 
 ## Dependacies
 To follow along make sure you have an in empty folder with these dependancies installed:
+```markdown
+npm i express express-session mongoose ejs bcrypt
+```
 - express
 - express session
 - mongoose
