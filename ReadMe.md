@@ -45,6 +45,8 @@ Let's look at authentication on an express app, by using the username/password c
 - By adding a salt to our password, we fix the case where multiple users decided to use the same password. Before storing the passwords, we generate password salts, which will be different for every user, then add them to the input of our hashing function. 
 - This will hash a different output which can then be stored on the database as a unique password for a specific user.
 ## Authorization
-The basic use-case of Authorization that will be covered is selective access of pages on a web app. For this, we will use cookies and sessions. We wi
+The basic use-case of Authorization that will be covered is selective access of pages on a web app. For this, we will use cookies and sessions. 
+- Cookies are bits of informationn that are stored in a user's browser when browsing a particular website.
+- Once a website sends a cookie to a client, the user's browser will send the cookie back on every subsequent request to the website.
 
 
