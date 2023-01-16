@@ -12,7 +12,7 @@
   - Bcrypt and Hashing functions
   - Password Salts
 - Authorization
-      - Sessions and Cookies (Brief explaination)
+  - Sessions and Cookies (Brief explaination)
 - Auth Demo
 
 ## Dependacies
