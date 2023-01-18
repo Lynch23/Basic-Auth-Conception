@@ -18,13 +18,14 @@
 ## Dependacies
 To follow along make sure you have an in empty folder with these dependancies installed:
 ```markdown
-npm i express express-session mongoose ejs bcrypt
+npm i express express-session mongoose ejs bcrypt cookie-parser
 ```
 - express
 - express session
 - mongoose
 - ejs
 - bcrypt
+- cookie-parser
 
 ## Authentication vs. Authorization
 - Authentication - Authentication is used by the server to verify who is accessing their web services. Typically, authentication is done with a username/password combination, but it can also be done with security questions, face recognition, fingerprint identification, etc.
@@ -46,7 +47,27 @@ Let's look at authentication on an express app, by using the username/password c
 - This will hash a different output which can then be stored on the database as a unique password for a specific user.
 ## Authorization
 The basic use-case of Authorization that will be covered is selective access of pages on a web app. For this, we will use cookies and sessions. 
-- Cookies are bits of informationn that are stored in a user's browser when browsing a particular website.
-- Once a website sends a cookie to a client, the user's browser will send the cookie back on every subsequent request to the website.
+- Cookies are small blocks of data, sent by a web server to a client, that are stored in a client's browser when browsing a particular website.
+- Once a website sends a cookie to a client, the browser will store and send back the cookie on every subsequent request to the website.
+- We will use this functionality to employ authorization on our webapp. Once a client is successfully authenticated, a cookie will be sent to the client as part of the response.
+- This cookie will be used everytime the user makes a request to our web app, as it will be part of the request.
+- Instead of storing data using cookies in the browser, we will store the data on the server-side and then send the browser a cookie that can be used to retrieve the data. This will be done by using sessions.
 
+## WorkFlow 
+Ensure MongoDB is installed before following along. Install MongoDB on Windows [here](https://youtu.be/FwMwO8pXfq0).
+### Install Dependacies
 
+```
+npm i install express express-session bcrypt mongoose cookie-parser ejs
+```
+Create a directory that will host our application
+
+```
+mkdir app
+cd app
+``` 
+
+Create the server.js file and inside the views folder, create ejs renders secret, login and register.
+```
+touch server.js views/secret.ejs views/login.ejs views/register.ejs
+```
