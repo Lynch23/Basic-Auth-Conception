@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+body {
+    height: 100vh;
+}
+form {
+    width: 50%;
+    margin: auto;
+    /* text-align: center; */
+}
+form label {
+    display: block;
+    width: 100%;
+    margin: .5rem;
+}
+form input {
+    display: block;
+    width: 100%;
+    min-height: 2.3rem;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 1rem;
+}
+form button {
+    width: 100%;
+    margin: 1rem .5rem;
+    padding: 1rem;
+    border: none;
+    background-color: #14213d;
+    color: aliceblue;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: .2s ease-in;
+}
+form button:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+
+li {
+    list-style: none;
+}
+p {
+    margin: 1rem 0;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 60px;
+    padding: 1.5rem;
+    background-color: #14213d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer {
+    width: 100%;
+    min-height: 60px;
+    padding: 1.5rem;
+    background-color: #14213d;
+    position: absolute;
+    bottom:0;
+}
+
+.link-container {
+    display: flex;
+    margin-left: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+}
+.nav-link {
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+.logo {
+    font-size: 1.5rem;
+    color: aliceblue;
+}
+.body {
+    padding: 1.5rem;
+}
+.section {
+    display: flex;
+}
+.side {
+    border-left: 1px solid black;
+    padding: 1.2rem;
+    height: 100vh;
+}

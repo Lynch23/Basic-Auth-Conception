@@ -58,7 +58,7 @@ Ensure MongoDB is installed before following along. Install MongoDB on Windows [
 ### Install Dependacies
 
 ```
-npm i install express express-session bcrypt mongoose cookie-parser ejs
+npm install express express-session bcrypt mongoose cookie-parser ejs ejs-mate
 ```
 Create a directory that will host our application
 
@@ -67,7 +67,8 @@ mkdir app
 cd app
 ``` 
 
-Create the server.js file and inside the views folder, create ejs renders secret, login and register.
+Create the server.js file
 ```
-touch server.js views/secret.ejs views/login.ejs views/register.ejs
+touch server.js
 ```
+All the necessary files that will be used have been added to the the followAlong folder. 

@@ -1,0 +1,28 @@
+{
+  "name": "authentication",
+  "version": "1.0.0",
+  "description": "This repo will explain and demonstrate how to integrate basic authentication/authorization into a web app running on ExpressJS, NodeJS and mongoDB. This will set you to on a path to building your own secure apps. There will be an assignment at the end to apply all the concepts discussed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lynch23/Basic-Auth-Conception.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lynch23/Basic-Auth-Conception/issues"
+  },
+  "homepage": "https://github.com/Lynch23/Basic-Auth-Conception#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "ejs": "^3.1.8",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.8.4"
+  }
+}
