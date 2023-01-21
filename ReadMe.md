@@ -112,9 +112,9 @@ For this, we will use express session(already imported and integrated into the s
   req.session.userId = foundUser._id
   ```
 - In the case of registering, we will set this after the new user has been saved to the database
-```
-req.session.userId = user._id
-```
+  ```
+  req.session.userId = user._id
+  ```
 - The cookie sent by express session will be a session id, it will have to be specific to a user. So we use the user._id from the database.
 -  Everytime the user sends a request to our server, express will check if that session id has been modified or not. This session id will be erased from our cookies whenever express verifies that it has been tampered with. 
 ## Protecting the Secret Page
