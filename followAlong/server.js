@@ -5,7 +5,7 @@ const ejsMate = require('ejs-mate');
 const mongoose = require('mongoose');
 const User = require('./models/User');
 const bcrypt = require('bcrypt');
-// const bcrypt = require('bcrypt');
+const session = require('express-session');
 
 // Creates a database "myapp" and connects mongoose to our database
 mongoose.connect('mongodb://127.0.0.1:27017/webSecurity', {
@@ -19,80 +19,46 @@ db.once('open', () => {
     console.log('Database connected');
 });
 
-const hashPassword = async (pw) => {
-    return await bcrypt.hash(pw, 12);
-};
 
-const login = async (pw, hash) => {
-    const result = await bcrypt.compare(pw, hash);
-    if (result) {
-        console.log('Logged in successfully')
-    }
-    else {
-        console.log('Incorrect password')
-    }
-}
-
-// login('monkeY', '$2b$11$YDXF76xU67f5VuOoXNrAFuGT.ejinr06FUiAfuMhVRSfVfynd5Jf.')
-
-// hashPassword('monkey');
-// Url parser expressJS
+// Url parser expressJS & session password setup
 app.use(express.urlencoded({ extended: true }));
+app.use(session({ secret: 'password' }));
+
 // Sets the template engine to ejs and sets the default directory for our renders to 'views'
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', ejsMate);
+
 // Sets the static assets for our app
 app.use(express.static(path.join(__dirname, 'public')));
 
+// App routes
 app.get('/', (req, res) => {
-    res.send('Homepage');
+    res.render('home');
 });
-
-
 app.get('/register', (req, res) => {
     res.render('register');
 });
 app.get('/login', (req, res) => {
     res.render('login');
 });
-app.get('/secret', (req, res) => {
+app.get('/secret', async (req, res) => {
     res.render('secret');
 });
 
+
+//Exercise starts here
 app.post('/register', async (req, res) => {
-    const { username, password } = req.body.user;
-    const hash = await hashPassword(password);
-    const user = new User({username, password: hash});
-    await user.save();
-    res.send(user);
+    /*Sign Up functionality here */
 });
 
 app.post('/login', async (req, res) => {
-    const { username, password } = req.body.user;
-    const user = await User.findOne({ username });
-    const validPassword = await login(password, user.password);
-    // const validPassword = await bcrypt.compare(password, user.password);
-    if(validPassword) {
-        res.redirect('/secret');
-    }
-    else {
-        res.redirect('/login');
-    }
-})
+    /*Log in functionality here. */
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
+app.post('/logout', (req, res) => {
+    /*Logout functionality here. */
+});
 
 
 
