@@ -65,14 +65,31 @@ app.get('/secret', requireLogin, async (req, res) => {
 });
 
 
-// Exercise starts here, fix the routes below to have Authentication, Authorization & Logout functionalities working on our app
 app.post('/register', async (req, res) => {
+    const { username, password } = req.body.user;
+    const user = new User({ username, password });
+    await user.save();
+    req.session.userId = user._id;
+    res.redirect('/secret');
 });
 
 app.post('/login', async (req, res) => {
+    const { username, password } = req.body.user;
+    const foundUser = await User.findAndAuthenticate(username, password);
+    if (foundUser) {
+        req.session.userId = foundUser._id;
+        req.flash('success', 'You have successfully logged in');
+        res.redirect('/secret');
+    }
+    else {
+        req.flash('errors', 'Wrong password or username, try again');
+        res.redirect('/login');
+    }
 });
 
 app.post('/logout', (req, res) => {
+    req.session.userId = null;
+    res.redirect('/');
 });
 
 
